@@ -3,161 +3,88 @@
 //Variables, types and assignment
 //uppgift1
 
-//använder "let"
+//använder "let""var""const"
 
-let fNamn = " Rafael";
-let eNamn = " Puelma";
-let older = "36";
-
-function hej() {
-  alert("Hej " + fNamn + eNamn + " ålder " + older);
-}
-
-hej();
-
-// använder "var"
-
-var a = 10;
-var b = 5;
-var c = 15;
-var sum = varSum(a, b, c);
-
-function varSum(a, b, c) {
-  return a + b + c;
-}
-
-alert(sum);
-
-// använder "const"
-
-const d = 20;
-const e = 25;
-const f = 30;
-
-const sum3 = totall(d, e, f);
-function totall(d, e, f) {
-  return d + e + f;
-}
-
-alert(sum3);
+let name = " Rafael";
+const number = 20;
+var ten = 10;
 
 // uppgift 2
+// Boolean array string objekt number
 
-// Boolean och numbers
-
-let age = 21;
-
-if (age >= 18 && age <= 30) {
-  console.log("Yes you can gamle ");
-} else {
-  console.log("Du måste gå");
-}
-
-//array
-
-let vals = [1, 2, 3, 4, 5];
-console.log(vals);
-
-// string
-
-let carName1 = "Volvo XC58"; // tagen från hemsidan, efter som jag inte var säker vad jag skulle göra med den
-let carName2 = "Volvo XC59"; // men jag har deklarerat 5 string med LET
-let carName1 = "Volvo XC61";
-let carName2 = "Volvo XC62";
-let carName1 = "Volvo XC63";
-
-// objects
-
-let person = {
-  namn: "Don",
-  older: 36,
-  matgillar: "fisk",
-  matogilar: "svamp",
-  ogonfarg: "brun",
-};
-
-console.log(
-  "jag heter " +
-    person.namn +
-    "jag gillar " +
-    person.matgillar +
-    "men jag gillar inte " +
-    person.matogilar
-);
+let isSunny = true;
+let carName = "Volvo XC58";
+let array = [1, 2, 3];
+let dog = { namn: "Pocket" };
+let x = 3;
 
 // Functions uppgift 3
 
-var num1 = 10;
-var num2 = 5;
-var sum = varSum(num1, num2);
+let fifty = 50;
+let five = 5;
+let summa = calculateSum(fifty, five);
 
-function varSum(num1, num2) {
+function calculateSum(num1, num2) {
   return num1 + num2;
 }
-
-console.log(sum);
+console.log("summan blir = " + summa);
 
 // uppgift 4
-var d = new Date();
-console.log(d);
+let date = new Date();
+console.log(date);
 
 // uppgift 5 Objects
 
-let person2 = {
-  fNamn1: "Don",
-  eNamn2: "juan",
-  older2: 36,
+let person = {
+  fornamn: "Don",
+  efternamn: "juan",
+  age: 36,
+  print: function () {
+    console.log(this.fornamn, this.efternamn, this.age);
+  },
 };
-
-console.log(
-  "jag heter " +
-    person2.fNamn1 +
-    person2.eNamn2 +
-    "och jag är  " +
-    person2.older2 +
-    " år gamal"
-);
+person.print();
 
 // uppgift 6 Objects
 
-var List = [4, 8, 15, 16, 23, 42]; // alla steg i uppgift 6 kommer att anväda samma List
+const list = [4, 8, 15, 16, 23, 42];
 
 // last on the list
-var lastArray = List[List.length - 1];
+const lastArray = list[list.length - 1];
 console.log(lastArray);
 
 // endast värden lägre än 20.
 
 let under20 = [];
-for (let i = 0; i < List.length; i++) {
-  if (List[i] <= 20) {
-    under20.push(List[i]);
+for (let i = 0; i < list.length; i++) {
+  if (list[i] <= 20) {
+    under20.push(list[i]);
   }
 }
 console.log(under20);
 
 // dubblera siffror
 
-var dubblaSiffror = List.map(dubblaNu);
-function dubblaNu(num) {
+const dubblaSiffror = list.map(dubblaNummer);
+function dubblaNummer(num) {
   return num * 2;
 }
 console.log(dubblaSiffror);
 
 // använd 'forEach'
 
-List.forEach(output);
-function output(item, index, array) {
-  console.log(index, item);
+list.forEach(output);
+function output(item) {
+  console.log(item);
 }
 
-// uppgift 7 Loops  funkar inte !!!!!!!!
-var i = 0;
+// uppgift 7
+let i = 0;
 while (i <= 6) {
   if (i < 3) {
     console.log("loop " + (i + 1));
   } else {
-    sonsole.log("Almost there ...");
+    console.log("Almost there ...");
   }
   i++;
 }
